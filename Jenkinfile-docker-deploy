@@ -75,21 +75,21 @@ stages {
  }
   stage('Apply Kubernetes files') {
             steps {
-             sh label: '', script: '''scp *.yml jenkins@52.53.227.91:/home/jenkins
-                                  ssh jenkins@52.53.227.91 kubectl apply -f deploy-kube.yml
-                                  ssh jenkins@52.53.227.91 kubectl apply -f service.yml'''
+             sh label: '', script: '''scp *.yml jenkins@13.57.232.225:/home/jenkins
+                                  ssh jenkins@13.57.232.225 kubectl apply -f deploy-kube.yml
+                                  ssh jenkins@13.57.232.225 kubectl apply -f service.yml'''
            
         }
      }
     stage('Validation and Rollback') {
             steps {
              sh label: '', script: '''sleep 30
-                                        status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://52.53.227.91:30005/gameoflifes/)
+                                        status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://13.57.232.225:30005/gameoflifes/)
                                         if [[ "$status_code" -ne 200 ]] ; then
                                             echo "Deployment has some problem - $status_code"
-                                            ssh jenkins@52.53.227.91 kubectl rollout undo deployment/sample-deploy
+                                            ssh jenkins@13.57.232.225 kubectl rollout undo deployment/sample-deploy
                                         else
-                                            ssh jenkins@52.53.227.91 kubectl rollout  status deployment/sample-deploy
+                                            ssh jenkins@13.57.232.225 kubectl rollout  status deployment/sample-deploy
                                         fi
                                     '''
            
