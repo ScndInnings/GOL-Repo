@@ -12,8 +12,8 @@ stages {
 
       // Get some code from a GitHub repository
 
-      //git 'https://github.com/ScndInnings/game-of-life.git'
-      git 'https://github.com/ScndInnings/GOL-Repo.git'
+      //git 'https://github.com/scndinnings/game-of-life.git'
+      git 'https://github.com/scndinnings/GOL-Repo.git'
 
       // Get the Maven tool.
      
