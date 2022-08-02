@@ -11,6 +11,6 @@ spec:
       spec:
          containers:
          - name: sample-pod
-           image: docker.io/ScndInnings/gameoflife-testimage:latest
+           image: docker.io/scndinnings/gameoflife-testimage:latest
            ports:
            - containerPort: 8080
