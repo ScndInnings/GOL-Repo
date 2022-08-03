@@ -11,6 +11,10 @@
             color: blue;
             font-family: sans-serif;
         }
+        h3 {
+            color: yellow;
+            font-family: sans-serif;
+        }
 
         .intro {
             font-family: sans-serif;
