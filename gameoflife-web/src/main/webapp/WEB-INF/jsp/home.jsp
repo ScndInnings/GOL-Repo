@@ -62,6 +62,7 @@
 </head>
 <body>
 <h2>Welcome to DevOps's Game Of Life!</h2>
+<h3Tabassum, Mohi, Rabia & Najmuddin all of you guys are my life :)</h3>
 
 <div class="intro">
     <p>This is a really cool web version of Conway's famous Game Of
